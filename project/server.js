@@ -15,7 +15,7 @@ const corsOptions = {
 
 app.use(cors({
   origin: ['https://text-to-html-3oc8az65g-shubhamshete682s-projects.vercel.app'],
-  methods: ['POST', 'GET'],
+  methods: ['POST', 'GET', 'FETCH'],
   credentials: true
 }));
 
