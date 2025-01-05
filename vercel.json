@@ -1,0 +1,27 @@
+{
+    "version": 2,
+    "builds": [
+      {
+        "src": "project/index.js",
+        "use": "@vercel/node"
+      },
+      {
+        "src": "tetx-html-app/package.json",
+        "use": "@vercel/static-build",
+        "config": {
+          "distDir": "build"
+        }
+      }
+    ],
+    "routes": [
+      {
+        "src": "/api/(.*)",
+        "dest": "project/index.js"
+      },
+      {
+        "src": "/(.*)",
+        "dest": "tetx-html-app/build/$1"
+      }
+    ]
+  }
+  
