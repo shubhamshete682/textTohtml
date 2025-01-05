@@ -23,7 +23,7 @@ const promptRoutes = require('./routes/promptRoutes');
 app.use('/api/prompts', promptRoutes);
 
 
-app.get('/health', (req, res) => {
+app.get('/', (req, res) => {
     res.status(200).json({ status: 'Server is healthy!' });
   });
 // Start server
