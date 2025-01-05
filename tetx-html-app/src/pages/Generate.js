@@ -56,7 +56,7 @@ const [cssCode, setCssCode] = useState('');
       setIsGenerating(true);
       await new Promise(resolve => setTimeout(resolve, 1000));
   
-      const response = await fetch("https://text-to-html-ea2n938dx-shubhamshete682s-projects.vercel.app/api/prompts/generate-html", {
+      const response = await fetch("https://text-to-html-ochre.vercel.app/api/prompts/generate-html", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
