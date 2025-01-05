@@ -9,6 +9,11 @@ const app = express();
 // Middlewares
 app.use(express.json()); // Parse JSON bodies
 app.use(cors());  // Enable cross-origin requests
+const corsOptions = {
+  origin: ['https://text-to-html-3oc8az65g-shubhamshete682s-projects.vercel.app'],
+};
+
+app.use(cors(corsOptions));
 
 // MongoDB connection
 mongoose.connect(process.env.MONGO_URI, {
