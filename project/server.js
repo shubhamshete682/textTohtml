@@ -13,7 +13,11 @@ const corsOptions = {
   origin: ['https://text-to-html-3oc8az65g-shubhamshete682s-projects.vercel.app'],
 };
 
-app.use(cors(corsOptions));
+app.use(cors({
+  origin: ['https://text-to-html-3oc8az65g-shubhamshete682s-projects.vercel.app'],
+  methods: ['POST', 'GET'],
+  credentials: true
+}));
 
 // MongoDB connection
 mongoose.connect(process.env.MONGO_URI, {
